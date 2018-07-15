@@ -4,12 +4,34 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" type="text/css" href="vis.min.css"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="styl.css"/>
   </head>
-  <body>
-    <div id="container">
-        <div id="header">Teoria grafów</div>
-        <div id="mynetwork"></div>
+  <body onload="startNetwork()">
+    <div id="header">Teoria grafów</div>
+    <div id="wrapper">
+        <div id="menu">
+            <a href="index.html"><div class="single">Kolorowanie</div></a>
+        </div>
+        <div id="content">
+            <div id="mynetwork"></div>
+        </div>
+        <div id="controls">
+            <h2>Ustawienia kolorowania</h2>
+            <form>
+                Sposób kolorowania:<br>
+                <input type="radio" name="algorithm" id="lf" checked>LF - Largest first<br/>
+                <input type="radio" name="algorithm" id="sl">SL - Smallest last<br/>
+            </form>
+            <button onclick="colorGraph()">Pokoloruj</button>
+            <button onclick="decolor()">Usuń kolory</button>
+            <hr>
+            <h2>Generowanie losowego grafu</h2>
+            Ilość wierzchołków: <br/>
+            <input type="number" id="rNodes" value=5><br/>
+            Ilość gałęzi: <br/>
+            <input type="number" id="rEdges" value=10><br/>
+            <button onclick="randomize()">Generuj</button>
+        </div>
     </div>
     <script src="graphs.js"></script>
   </body>
