@@ -10,4 +10,4 @@ Project made using:
   - JavaScript
     - vis.js
 
-[Link to preview](https://wolpear.github.io/GraphTheory/)
+[Link to preview](https://karczewsky.github.io/GraphTheory/)
